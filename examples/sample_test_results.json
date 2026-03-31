@@ -1,0 +1,14 @@
+[
+  {
+    "name": "Claims calculation validation",
+    "status": "FAIL",
+    "severity": "HIGH",
+    "area": "claims"
+  },
+  {
+    "name": "Login functionality test",
+    "status": "PASS",
+    "severity": "LOW",
+    "area": "auth"
+  }
+]
