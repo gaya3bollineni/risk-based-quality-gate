@@ -15,3 +15,10 @@ Traditional CI/CD pipelines treat all failures equally. In real‑world enterpri
 
 ## Project Status
 Initial development. Core risk scoring logic and CI/CD integrations will be added incrementally.
+
+## Quick Start
+
+Run the CLI against a test results file:
+
+```bash
+python src/cli.py examples/sample_test_results.json
