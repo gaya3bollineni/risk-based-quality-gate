@@ -1,0 +1,14 @@
+[
+  {
+    "name": "Claims payout calculation",
+    "status": "FAIL",
+    "severity": "CRITICAL",
+    "area": "claims"
+  },
+  {
+    "name": "Payment authorization workflow",
+    "status": "FAIL",
+    "severity": "HIGH",
+    "area": "payments"
+  }
+]
