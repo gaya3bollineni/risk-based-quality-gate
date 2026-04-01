@@ -22,3 +22,13 @@ Run the CLI against a test results file:
 
 ```bash
 python src/cli.py examples/sample_test_results.json
+
+
+### Example Scenarios
+
+Low or mixed risk:
+```bash
+python run.py examples/sample_test_results.json
+High risk:
+python run.py examples/high_risk_release.json
+
