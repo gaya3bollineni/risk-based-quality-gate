@@ -1,0 +1,27 @@
+name: Risk-Based Quality Gate
+
+on:
+  pull_request:
+  push:
+    branches: [ main ]
+
+jobs:
+  quality-gate:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+
+      - name: Install dependencies
+        run: |
+          pip install -r requirements.txt || true
+
+      - name: Run risk-based quality gate
+        run: |
+          python src/cli.py examples/sample_test_results.json
