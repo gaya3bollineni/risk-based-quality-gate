@@ -68,7 +68,14 @@ Initial development.
 Core risk scoring logic is in place, and CI/CD integrations and extensibility features will be added incrementally.
 
 ---
+##Tags:
+ci-cd
+quality-engineering
+software-reliability
+release-management
+risk-management
 
+---
 ## Quick Start
 
 Run the CLI against a test results file:
@@ -80,9 +87,4 @@ High risk:
 python run.py examples/high_risk_release.json
 
 
-**##Tags:**
-ci-cd
-quality-engineering
-software-reliability
-release-management
-risk-management
+
