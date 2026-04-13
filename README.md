@@ -78,3 +78,11 @@ Low or medium risk:
 python src/cli.py examples/sample_test_results.json
 High risk:
 python run.py examples/high_risk_release.json
+
+
+**##Tags:**
+ci-cd
+quality-engineering
+software-reliability
+release-management
+risk-management
