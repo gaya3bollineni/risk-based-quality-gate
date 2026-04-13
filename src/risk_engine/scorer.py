@@ -17,7 +17,7 @@ AREA_WEIGHTS = {
 
 def score_release(results: List[TestResult]):
     # Calculates an overall release risk score based on failed tests.
-    
+
     total_score = 0
 
     for test in results:
@@ -31,9 +31,20 @@ def score_release(results: List[TestResult]):
 
     if total_score >= 60:
         decision = "STOP"
+        primary_reason = "High aggregated risk score across critical areas"
+        recommended_action = "Block deployment pending investigation"
     elif total_score >= 30:
         decision = "CAUTION"
+        primary_reason = "Elevated risk score requiring human review"
+        recommended_action = "Require explicit human approval"
     else:
         decision = "GO"
+        primary_reason = "Low aggregated risk score"
+        recommended_action = "Proceed with deployment"
 
-    return total_score, decision
+    explanation = {
+        "primary_reason": primary_reason,
+        "recommended_action": recommended_action
+    }
+
+    return total_score, decision, explanation

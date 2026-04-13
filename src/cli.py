@@ -31,10 +31,13 @@ def main():
     file_path = sys.argv[1]
     test_results = load_test_results(file_path)
 
-    score, decision = score_release(test_results)
+    score, decision, explanation = score_release(test_results)
 
+    
     print(f"Release Risk Score: {score}")
     print(f"Decision: {decision}")
+    print(f"Reason: {explanation['primary_reason']}")
+    print(f"Recommended Action: {explanation['recommended_action']}")
 
     # Exit with non‑zero status if risk is too high
     if decision == "STOP":

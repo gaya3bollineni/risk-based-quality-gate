@@ -60,12 +60,31 @@ Release outcomes are derived from this evaluation, enabling policy‑driven deci
 
 This approach emphasizes transparency and explainability over opaque pass/fail outcomes.
 
+## Example Explainable Decision Output
+
+Given the following input file:examples/high_risk_release.json
+Running the quality gate produces an explainable release decision:
+Release Risk Score: 125
+Decision: STOP
+Reason: High aggregated risk score across critical areas
+Recommended Action: Block deployment pending investigation
+
+This output is intentionally designed to make release risk explicit
+and auditable, supporting informed human decision‑making rather than
+automatic pass/fail enforcement.
+
 ---
 
 ## Project Status
 
-Initial development.  
-Core risk scoring logic is in place, and CI/CD integrations and extensibility features will be added incrementally.
+Reference implementation.
+
+Core risk scoring and explainable release decision logic are stable.
+The project is intentionally lightweight and focused on clarity,
+auditability, and decision support rather than CI/CD tooling integration.
+
+Future enhancements will prioritize governance transparency over feature expansion.
+
 
 ---
 ##Tags:
@@ -80,8 +99,9 @@ risk-management
 
 Run the CLI against a test results file:
 
-```bash
+
 Low or medium risk:
+```bash
 python src/cli.py examples/sample_test_results.json
 High risk:
 python run.py examples/high_risk_release.json
