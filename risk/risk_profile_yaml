@@ -1,0 +1,12 @@
+domains:
+  claims_processing:
+    criticality: critical
+    weight: 5
+
+  checkout:
+    criticality: high
+    weight: 4
+
+  reporting:
+    criticality: low
+    weight: 1
